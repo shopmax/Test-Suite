@@ -1,0 +1,100 @@
+Test Plan  Document  Of  spint2
+
+1) Test plan ID sh_ID_001
+2) Introduction
+Spint2 is about creation of new category and products that can be viewed on in the left panel of shopmax.ofbizdemo.com website. We can also upload the product created .We have to first register to the website for uploading the product.
+3) Test Items
+a) Create Category
+b) Upload Product (with advanced options)
+c) Create a Buyer
+d) Create Seller
+e) Approve seller
+4) References
+a) Spint2.doc shared by Mark
+5) Features to be tested
+
+1. Create Category
+1.  Enter in this link : shopmaxbackend.ofbizdemo.com/catalog
+o	Username : admin
+o	Password : ofbiz
+2.	Click on button “Create New Category”
+3.	Input information in form “Create Product Category
+o	Product Category ID
+o	Product Category Type : Catalog
+o	Product Category Name
+4.	Click “SUBMIT” Button
+5.	Click on menu “ROLLUP”
+6.	Input information in form "Add Category Parent Category"
+o	Category : SHOPMAX_BROWSE_ROOT
+o	Current Date
+7.	Click “Add” Button
+8.	Go to shopmax.ofbizdemo.com
+9.	Check your category on category left bar (need to upload product to your category first) or 
+product page
+
+2. Upload Product (without advanced options)
+1.	Enter in this link : shopmaxseller.ofbizdemo.com/shop
+2.	Click on text “Login”
+3.	Using Email address : DemoSeller , Password : ofbiz
+4.	Click on text “Upload Product” in header
+5.	Input information of product. Except in form “ADVANCED OPTIONS”
+6.	Click button “SUBMIT”
+7.	Go to shopmax.ofbizdemo.com
+8.	Click on category you added product
+
+3. Create Buyer
+1.	Enter in this link : shopmax.ofbizdemo.com 
+2.	Click on text “Register” on header
+3.	Input information in form “USER INFORMATION”
+o	Password (More than 5 words)
+o	Don't check in select box “Registered as business user”
+4.	Click “SUBMIT” Button
+
+4. Create Seller (without physical store detail)
+1.	Enter in this link : shopmax.ofbizdemo.com
+2.	Click on text “Register” on header
+3.	Input information in form “USER INFORMATION”
+o	Password (More than 5 words)
+o	Check in select box “Registered as business user”
+o	Form “BUSINESS INFORMATION” please only click on radio button
+ “Create a free domain with shopmax” for now
+o	Form “PAYMENT METHOD” use Card Number 4111-1111-1111-1111 for test
+4.	Click “SUBMIT” Button
+
+5. Approve Seller
+1.	Enter in this link : shopmaxbackend.ofbizdemo.com/partymgr/control/approvalseller
+o	Username : admin
+o	Password : ofbiz
+2.	Click button “Approve”
+3.	Enter in URL : Value that input in Create a free domain with shopmax
+ (xxx.shopmax.ofbizdemo.com)
+
+
+6) Features not to be tested
+N/A
+7) Entry Criteria
+a) Test Design
+ Requirement document
+Test case document
+Navigating the website link
+
+b) Test Execution
+ a)Test Case document
+ b) Spint2.doc received from mark
+
+8) Exit Criteria
+Execution of all the test case created.
+Maximum defects fixed.
+Final Regression testing successful.
+
+9) Suspension Criteria
+a) If nothing is working  in website
+b) If more blocker bugs are found.
+
+
+10) Roles and Responsibilities
+Name	Role	Responsibilities	Remark	
+Sona Ojha	Testing	Test case document creation, Execution of test case reporting the bugs 		
+				
+				
+
