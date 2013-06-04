@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://shopmax.ofbizdemo.com" />
+<title>Create_Buyer</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Create_Buyer</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/control/main</td>
+	<td></td>
+</tr>
+<!--// Click Register Link-->
+<tr>
+	<td>click</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<!--// Input the Registration Details-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=emailAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=emailAddress</td>
+	<td>javascript{&quot;rachit&quot;+(new Date()).getTime()+&quot;@gmail.com&quot;;}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=emailAddress</td>
+	<td>username</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=currentPassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=currentPassword</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=currentPasswordVerify</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=currentPasswordVerify</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=currentPassword</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=firstName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=firstName</td>
+	<td>javascript{(new Date()).getTime();}</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=lastName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lastName</td>
+	<td>javascript{(new Date()).getTime();}</td>
+</tr>
+<!--// Submit the form-->
+<tr>
+	<td>click</td>
+	<td>id=submit-createcustomer</td>
+	<td></td>
+</tr>
+<!--// Verifying the Congratulation Text-->
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Congratulation </td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=shopping-but</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=main</td>
+	<td></td>
+</tr>
+<!--// Logout from the application-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<!--// Login Back from the same created buyer-->
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=USERNAME</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=USERNAME</td>
+	<td>${username}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PASSWORD</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.log_btn</td>
+	<td></td>
+</tr>
+<!--// Click upload product link and check if user has no permission as he is buyer-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Upload Product</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Upload Product</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--// Logout from the app-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
