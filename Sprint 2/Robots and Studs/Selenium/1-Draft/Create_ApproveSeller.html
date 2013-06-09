@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://shopmax.ofbizdemo.com" />
+<title>Create_ApproveSeller</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Create_ApproveSeller</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/control/main</td>
+	<td></td>
+</tr>
+<!--// Click Register Link-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<!--// Check "Registered As Business User" checkbox-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=optionsRadios1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=optionsRadios1</td>
+	<td></td>
+</tr>
+<!--// Verify if options are available now-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=businessName</td>
+	<td></td>
+</tr>
+<!--//Fill User Information-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=emailAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=emailAddress</td>
+	<td>javascript{&quot;seller&quot;+(new Date()).getTime()+&quot;@gmail.com&quot;}</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=currentPassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=currentPasswordVerify</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=firstName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=lastName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=currentPassword</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=currentPasswordVerify</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=firstName</td>
+	<td>firstname</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lastName</td>
+	<td>lastname</td>
+</tr>
+<!--// Asserting all required fields-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=businessName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=tradingName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=phoneNumber_text_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=phoneNumber_text_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=domianName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=inputAccountName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=accountNumber-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=accountNumber-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=accountNumber-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=accountNumber-3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=yourBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=branchName_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=inputLocation_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=phy_phone_text_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=phy_fax_text_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=mon_check_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=mon_o_0_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=mon_o_1_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=mon_c_0_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=mon_c_1_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=submit-createcustomer</td>
+	<td></td>
+</tr>
+<!--// Fill Business Information-->
+<tr>
+	<td>type</td>
+	<td>id=businessName</td>
+	<td>javascript{&quot;business&quot;+(new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=tradingName</td>
+	<td>javascript{&quot;mytradename&quot;+(new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phoneNumber_text_0</td>
+	<td>1111111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phoneNumber_text_1</td>
+	<td>222222222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=domianName</td>
+	<td>javascript{&quot;mydomain&quot;+(new Date()).getTime()+&quot;.com&quot;}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputAccountName</td>
+	<td>javascript{&quot;acct&quot;+(new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=accountNumber-0</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=accountNumber-1</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=accountNumber-2</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=accountNumber-3</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=yourBtn</td>
+	<td>153_153.jpg</td>
+</tr>
+<!--// Fill PHYSICAL STORES DETAIL-->
+<tr>
+	<td>type</td>
+	<td>id=branchName_0</td>
+	<td>test branch</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputLocation_0</td>
+	<td>test location</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phy_phone_text_0</td>
+	<td>333333333</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phy_fax_text_0</td>
+	<td>33333333</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=mon_check_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mon_o_0_0</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mon_o_1_0</td>
+	<td>00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mon_c_0_0</td>
+	<td>14</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mon_c_1_0</td>
+	<td>00</td>
+</tr>
+<!--// Submitting the form-->
+<tr>
+	<td>click</td>
+	<td>id=submit-createcustomer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Congratulation !</td>
+	<td></td>
+</tr>
+<!--// Logout -->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--// Verify if you are logged out-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<!--// Login As Admin for approving the  seller-->
+<tr>
+	<td>open</td>
+	<td>https://shopmaxbackend.ofbizdemo.com/partymgr/control/approvalseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=USERNAME</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=PASSWORD</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=USERNAME</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PASSWORD</td>
+	<td>ofbiz</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--// Approve the seller now-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=submitButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=submitButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>name=submitButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--// Logout as an Admin-->
+<tr>
+	<td>click</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<!--// confirm if you are logout-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=USERNAME</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
