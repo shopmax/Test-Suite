@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://shopmax.ofbizdemo.com" />
+<title>CheckoutAsSeller</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CheckoutAsSeller</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/control/main</td>
+	<td></td>
+</tr>
+<!--// Login as a seller-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=loginButton</td>
+	<td></td>
+</tr>
+<!--// Type the login details-->
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>DemoSeller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>ofbiz</td>
+</tr>
+<!--// Click Login button-->
+<tr>
+	<td>click</td>
+	<td>id=loginButton</td>
+	<td></td>
+</tr>
+<!--// Add a product into the cart-->
+<tr>
+	<td>click</td>
+	<td>//html/body/div[3]/div/div[2]/div[2]/div/div/div[2]/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=additem_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=additem_0</td>
+	<td></td>
+</tr>
+<!--// Go into the cart-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=View Cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=View Cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=processShoppingCartButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--// proceed with checkout-->
+<tr>
+	<td>click</td>
+	<td>id=processShoppingCartButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=summaryButton3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--// if Billing and Shipping information is already present-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Shipping Address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Billing information</td>
+	<td></td>
+</tr>
+<!--// Click place order-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=summaryButton3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=exp</td>
+	<td>23456</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id=&quot;summaryButton3&quot;]</td>
+	<td></td>
+</tr>
+<!--// Order is placed-->
+</tbody></table>
+</body>
+</html>
