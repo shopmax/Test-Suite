@@ -120,6 +120,11 @@
 	<td>label=Catalog</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>name=Update</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>name=Update</td>
 	<td></td>
@@ -187,7 +192,17 @@
 	<td>6/1/2013 12:00:00 AM</td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>waitForElementPresent</td>
+	<td>css=form[name=&quot;addParentForm&quot;] &gt; input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
 	<td>css=form[name=&quot;addParentForm&quot;] &gt; input[type=&quot;submit&quot;]</td>
 	<td></td>
 </tr>
@@ -197,11 +212,26 @@
 	<td></td>
 </tr>
 <tr>
-	<td>openWindow</td>
+	<td>open</td>
 	<td>https://shopmax.ofbizdemo.com</td>
 	<td></td>
 </tr>
+<tr>
+	<td>windowFocus</td>
+	<td></td>
+	<td></td>
+</tr>
 <!--// Login as Demoseller-->
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>link=Login</td>
@@ -222,6 +252,12 @@
 	<td>css=input.log_btn</td>
 	<td></td>
 </tr>
+<!--// Conform if added category reflects here-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=${category_Name}</td>
+	<td></td>
+</tr>
 <!--// Go to Upload Product Page-->
 <tr>
 	<td>clickAndWait</td>
@@ -240,22 +276,52 @@
 </tr>
 <!--// Logout as DemoSeller-->
 <tr>
-	<td>click</td>
+	<td>waitForElementPresent</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
 	<td>id=accountOptions_chzn_o_4</td>
 	<td></td>
 </tr>
 <tr>
-	<td>close</td>
+	<td>clickAt</td>
+	<td>id=accountOptions_chzn_o_4</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
 	<td></td>
 </tr>
 <!--// Logout as Admin-->
+<tr>
+	<td>open</td>
+	<td>https://shopmaxbackend.ofbizdemo.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>link=Logout</td>
 	<td></td>
 </tr>
-
+<!--// Confirmation if you are logged out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=USERNAME</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
