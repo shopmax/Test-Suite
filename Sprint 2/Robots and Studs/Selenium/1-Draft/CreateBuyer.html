@@ -38,6 +38,7 @@
 	<td>id=emailAddress</td>
 	<td>username</td>
 </tr>
+<!--// Enter mismatch passwords-->
 <tr>
 	<td>assertElementPresent</td>
 	<td>id=currentPassword</td>
@@ -56,7 +57,7 @@
 <tr>
 	<td>type</td>
 	<td>id=currentPasswordVerify</td>
-	<td>111111</td>
+	<td>11111</td>
 </tr>
 <tr>
 	<td>storeValue</td>
@@ -84,6 +85,48 @@
 	<td>javascript{(new Date()).getTime();}</td>
 </tr>
 <!--// Submit the form-->
+<tr>
+	<td>click</td>
+	<td>id=submit-createcustomer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=emailAddress</td>
+	<td></td>
+</tr>
+<!--// provide matching passwords, but invalid email address-->
+<tr>
+	<td>type</td>
+	<td>id=emailAddress</td>
+	<td>invalidEmailAddress</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=currentPasswordVerify</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit-createcustomer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=emailAddress</td>
+	<td></td>
+</tr>
+<!--// valid valid email address with matching password-->
+<tr>
+	<td>type</td>
+	<td>id=emailAddress</td>
+	<td>javascript{&quot;rachit&quot;+(new Date()).getTime()+&quot;@gmail.com&quot;;}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=emailAddress</td>
+	<td>username</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=submit-createcustomer</td>
