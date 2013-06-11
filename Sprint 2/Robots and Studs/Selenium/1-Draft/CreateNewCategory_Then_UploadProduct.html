@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://shopmaxbackend.ofbizdemo.com" />
+<title>CreateNewCategory</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CreateNewCategory</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/catalog/control/main</td>
+	<td></td>
+</tr>
+<!--//Login Using Admin details-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=USERNAME</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=PASSWORD</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=USERNAME</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PASSWORD</td>
+	<td>ofbiz</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Create New Category</td>
+	<td></td>
+</tr>
+<!--//Create New Category-->
+<tr>
+	<td>click</td>
+	<td>link=Create New Category</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=productCategoryId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=categoryName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=categoryName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=description</td>
+	<td></td>
+</tr>
+<!--//Provide Inputs into category form fields-->
+<tr>
+	<td>type</td>
+	<td>name=productCategoryId</td>
+	<td>javascript{(new Date()).getTime();}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>name=productCategoryId</td>
+	<td>category_Id</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${category_Id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=categoryName</td>
+	<td>javascript{&quot;catName&quot;+(new Date()).getTime();}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>name=categoryName</td>
+	<td>category_Name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${category_Name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=description</td>
+	<td>my category description</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=productCategoryTypeId</td>
+	<td>label=Catalog</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=Update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=Update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${category_Id}</td>
+	<td></td>
+</tr>
+<!--// Click Rollup Menu-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Rollup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Rollup</td>
+	<td></td>
+</tr>
+<!--// Select parent category-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=3_lookupId_parentProductCategoryId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=3_lookupId_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=categoryName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=categoryName</td>
+	<td>SHOPMAX_BROWSE_ROOT</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lookupSubmitButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=SHOPMAX_BROWSE_ROOT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=SHOPMAX_BROWSE_ROOT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=fromDate_1_i18n</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=fromDate_1_i18n</td>
+	<td>6/1/2013 12:00:00 AM</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=form[name=&quot;addParentForm&quot;] &gt; input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form[name=&quot;addParentForm&quot;] &gt; input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://shopmax.ofbizdemo.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>windowFocus</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--// Login as Demoseller-->
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=USERNAME</td>
+	<td>DemoSeller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PASSWORD</td>
+	<td>ofbiz</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.log_btn</td>
+	<td></td>
+</tr>
+<!--// Conform if added category reflects here-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=${category_Name}</td>
+	<td></td>
+</tr>
+<!--// Go to Upload Product Page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Upload Product</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=category_1</td>
+	<td>label=${category_Name}</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=${category_Id}</td>
+	<td></td>
+</tr>
+<!--// Assign a category-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=assign-category</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assign-category</td>
+	<td></td>
+</tr>
+<!--// Try to Assign category twice-->
+<!--// Upload product into the category which has no child category-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=inputProductName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=prodDescript</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=listingPrice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=stock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=promoPrice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=datepicker1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=datepicker2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=checkboxUpload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=submit_uploadProductToSeller</td>
+	<td></td>
+</tr>
+<!--// Fill details-->
+<tr>
+	<td>type</td>
+	<td>id=inputProductName</td>
+	<td>javascript{&quot;myproduct&quot;+(new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=inputProductName</td>
+	<td>created_product_name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prodDescript</td>
+	<td>my first product</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=listingPrice</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=stock</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checkboxUpload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=datepicker1</td>
+	<td>06/01/2013</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=datepicker2</td>
+	<td>06/10/2013</td>
+</tr>
+<!--// Submit the form without uploading the product image-->
+<tr>
+	<td>click</td>
+	<td>id=submit_uploadProductToSeller</td>
+	<td></td>
+</tr>
+<!--// validation message displays-->
+<tr>
+	<td>verifyTextPresent</td>
+	<td>&nbsp;&nbsp;&nbsp;Please fill in all required fields</td>
+	<td></td>
+</tr>
+<!--// Logout as DemoSeller-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#accountOptions_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=accountOptions_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<!--// Logout as Admin-->
+<tr>
+	<td>open</td>
+	<td>https://shopmaxbackend.ofbizdemo.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<!--// Confirmation if you are logged out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=USERNAME</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
