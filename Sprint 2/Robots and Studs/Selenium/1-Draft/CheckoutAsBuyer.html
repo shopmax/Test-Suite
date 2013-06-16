@@ -182,6 +182,298 @@
 	<td></td>
 </tr>
 <!--// Order is placed-->
+<!--// Add a product into the cart-->
+<tr>
+	<td>click</td>
+	<td>//html/body/div[3]/div/div[2]/div[2]/div/div/div[2]/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=additem_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=additem_0</td>
+	<td></td>
+</tr>
+<!--// Go into the cart-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=View Cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=View Cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=processShoppingCartButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--// proceed with checkout-->
+<tr>
+	<td>click</td>
+	<td>id=processShoppingCartButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=processOrderSummaryButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--// Edit cart-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Edit Cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Edit Cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.input-mini</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.input-mini</td>
+	<td>2</td>
+</tr>
+<!--// Click Proceed to checkout button-->
+<tr>
+	<td>click</td>
+	<td>id=processShoppingCartButton</td>
+	<td></td>
+</tr>
+<!--//  Check for Shipping Information fields-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=shipFirstName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=shipLastName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=shipPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=shipEmail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=shipStreetAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=shipPostal</td>
+	<td></td>
+</tr>
+<!--// Fill the details-->
+<tr>
+	<td>type</td>
+	<td>id=shipFirstName</td>
+	<td>rachit</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shipLastName</td>
+	<td>gupta</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shipPhone</td>
+	<td>1234567891</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shipEmail</td>
+	<td>rachit@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shipStreetAddress</td>
+	<td>duplex-129, NCR, Delhi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shipPostal</td>
+	<td>9876</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=shipStreetAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#shipDropDown1_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=shipDropDown1_chzn_o_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=shipDropDown1_chzn_o_1</td>
+	<td></td>
+</tr>
+<!--// Select "Same as shipping information" checkbox-->
+<tr>
+	<td>click</td>
+	<td>id=sameAsShipping</td>
+	<td></td>
+</tr>
+<!--// Enter payment details-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=firstNameOnCard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=lastNameOnCard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=cardNumber-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=cardNumber-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=cardNumber-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=cardNumber-3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=secureCode</td>
+	<td></td>
+</tr>
+<!--// fill the payment values-->
+<tr>
+	<td>type</td>
+	<td>id=firstNameOnCard</td>
+	<td>rachit</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lastNameOnCard</td>
+	<td>gupta</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=cardNumber-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cardNumber-0</td>
+	<td>4111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cardNumber-1</td>
+	<td>1111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cardNumber-2</td>
+	<td>1111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cardNumber-3</td>
+	<td>1111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=secureCode</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=secureCode</td>
+	<td>216</td>
+</tr>
+<!--// Click place order-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=processOrderSummaryButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=processOrderSummaryButton</td>
+	<td></td>
+</tr>
+<!--// if Billing and Shipping information is already present-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Shipping Address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Billing information</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
