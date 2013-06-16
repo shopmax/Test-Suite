@@ -237,6 +237,55 @@
 	<td>id=accountOptions_chzn_o_4</td>
 	<td></td>
 </tr>
+<!--// Reset Password-->
+<tr>
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=exact:Forgotten password?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=exact:Forgotten password?</td>
+	<td></td>
+</tr>
+<!--// Input fields-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=emailPassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=emailPasswordButton</td>
+	<td></td>
+</tr>
+<!--// Submitting the reset password without email address-->
+<tr>
+	<td>click</td>
+	<td>id=emailPasswordButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=emailWarning</td>
+	<td></td>
+</tr>
+<!--// Submitting the form with email address-->
+<tr>
+	<td>type</td>
+	<td>id=emailPassword</td>
+	<td>${username}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=emailPasswordButton</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
