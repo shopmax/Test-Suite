@@ -151,6 +151,11 @@
 </tr>
 <!--//  Check for Shipping Information fields-->
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=shipFirstName</td>
+	<td></td>
+</tr>
+<tr>
 	<td>assertElementPresent</td>
 	<td>id=shipFirstName</td>
 	<td></td>
@@ -280,11 +285,6 @@
 	<td>rachit</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=lastNameOnCard</td>
 	<td>gupta</td>
@@ -310,18 +310,53 @@
 	<td>1111</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=cardNumber-3</td>
 	<td>1111</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
+	<td>clickAt</td>
+	<td>css=#paymentDropDown_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=paymentDropDown_chzn_o_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=paymentDropDown_chzn_o_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#expMonth_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=expMonth_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=expMonth_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#expYear_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=expYear_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=expYear_chzn_o_4</td>
 	<td></td>
 </tr>
 <tr>
@@ -346,6 +381,11 @@
 	<td></td>
 </tr>
 <!--// if Billing and Shipping information is already present-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Edit Shipping Address</td>
+	<td></td>
+</tr>
 <tr>
 	<td>assertElementPresent</td>
 	<td>link=Edit Shipping Address</td>
