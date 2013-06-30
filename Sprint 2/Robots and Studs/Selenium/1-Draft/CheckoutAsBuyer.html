@@ -96,93 +96,17 @@
 	<td></td>
 </tr>
 <!--// Order placement-->
-<!--// Add a product into the cart-->
 <tr>
 	<td>click</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<!--// Add a product into the cart-->
+<tr>
+	<td>waitForElementPresent</td>
 	<td>//html/body/div[3]/div/div[2]/div[2]/div/div/div[2]/ul/li/a</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=additem_0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=additem_0</td>
-	<td></td>
-</tr>
-<!--// Go into the cart-->
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>link=View Cart</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=View Cart</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=processShoppingCartButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<!--// proceed with checkout-->
-<tr>
-	<td>click</td>
-	<td>id=processShoppingCartButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=summaryButton3</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<!--// if Billing and Shipping information is already present-->
-<tr>
-	<td>assertElementPresent</td>
-	<td>link=Edit Shipping Address</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>link=Edit Billing information</td>
-	<td></td>
-</tr>
-<!--// Click place order-->
-<tr>
-	<td>assertElementPresent</td>
-	<td>id=summaryButton3</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=exp</td>
-	<td>23456</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id=&quot;summaryButton3&quot;]</td>
-	<td></td>
-</tr>
-<!--// Order is placed-->
-<!--// Add a product into the cart-->
 <tr>
 	<td>click</td>
 	<td>//html/body/div[3]/div/div[2]/div[2]/div/div/div[2]/ul/li/a</td>
@@ -268,6 +192,11 @@
 	<td></td>
 </tr>
 <!--//  Check for Shipping Information fields-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=shipFirstName</td>
+	<td></td>
+</tr>
 <tr>
 	<td>assertElementPresent</td>
 	<td>id=shipFirstName</td>
@@ -398,8 +327,18 @@
 	<td>rachit</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
+	<td>clickAt</td>
+	<td>css=#paymentDropDown_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=paymentDropDown_chzn_o_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=paymentDropDown_chzn_o_1</td>
 	<td></td>
 </tr>
 <tr>
@@ -428,18 +367,38 @@
 	<td>1111</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=cardNumber-3</td>
 	<td>1111</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=a.chzn-single.chzn-single-with-drop &gt; div &gt; b</td>
+	<td>clickAt</td>
+	<td>css=#expMonth_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=expMonth_chzn_o_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=expMonth_chzn_o_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#expYear_chzn &gt; a.chzn-single &gt; div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>id=expYear_chzn_o_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=expYear_chzn_o_4</td>
 	<td></td>
 </tr>
 <tr>
