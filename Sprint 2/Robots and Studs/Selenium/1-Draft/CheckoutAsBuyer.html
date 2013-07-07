@@ -74,6 +74,16 @@
 	<td>javascript{(new Date()).getTime();}</td>
 </tr>
 <tr>
+	<td>storeValue</td>
+	<td>id=firstName</td>
+	<td>varFirstname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${varFirstname}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>assertElementPresent</td>
 	<td>id=lastName</td>
 	<td></td>
@@ -82,6 +92,16 @@
 	<td>type</td>
 	<td>id=lastName</td>
 	<td>javascript{(new Date()).getTime();}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=lastName</td>
+	<td>varLastname</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${varLastname}</td>
+	<td></td>
 </tr>
 <!--// Submit the form-->
 <tr>
@@ -191,6 +211,12 @@
 	<td>id=processShoppingCartButton</td>
 	<td></td>
 </tr>
+<!--// verify if Shopping Cart is hyperlinked- QA-19-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=shoppingCartLink</td>
+	<td></td>
+</tr>
 <!--//  Check for Shipping Information fields-->
 <tr>
 	<td>waitForElementPresent</td>
@@ -228,16 +254,6 @@
 	<td></td>
 </tr>
 <!--// Fill the details-->
-<tr>
-	<td>type</td>
-	<td>id=shipFirstName</td>
-	<td>rachit</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=shipLastName</td>
-	<td>gupta</td>
-</tr>
 <tr>
 	<td>type</td>
 	<td>id=shipPhone</td>
@@ -424,13 +440,23 @@
 </tr>
 <!--// if Billing and Shipping information is already present-->
 <tr>
-	<td>assertElementPresent</td>
-	<td>link=Edit Shipping Address</td>
+	<td>verifyTextPresent</td>
+	<td>Order confirmation</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertElementPresent</td>
-	<td>link=Edit Billing information</td>
+	<td>link=Print order confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${varFirstname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${varLastname}</td>
 	<td></td>
 </tr>
 </tbody></table>
